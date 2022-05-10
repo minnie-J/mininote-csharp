@@ -53,10 +53,10 @@
             this.introPanel.Location = new System.Drawing.Point(0, 0);
             this.introPanel.Name = "introPanel";
             this.introPanel.RowCount = 5;
-            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160F));
-            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.introPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.introPanel.Size = new System.Drawing.Size(384, 461);
             this.introPanel.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.startButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startButton.Location = new System.Drawing.Point(142, 346);
+            this.startButton.Location = new System.Drawing.Point(142, 343);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(100, 34);
             this.startButton.TabIndex = 2;
@@ -79,9 +79,9 @@
             // 
             this.logoBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoBox.Image = ((System.Drawing.Image)(resources.GetObject("logoBox.Image")));
-            this.logoBox.Location = new System.Drawing.Point(3, 88);
+            this.logoBox.Location = new System.Drawing.Point(3, 83);
             this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(378, 154);
+            this.logoBox.Size = new System.Drawing.Size(378, 164);
             this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoBox.TabIndex = 0;
             this.logoBox.TabStop = false;
@@ -90,13 +90,13 @@
             // 
             this.blLabel.AutoSize = true;
             this.blLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.blLabel.Font = new System.Drawing.Font("Noto Mono for Powerline", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blLabel.Font = new System.Drawing.Font("Bradley Hand ITC", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.blLabel.Location = new System.Drawing.Point(3, 245);
+            this.blLabel.Location = new System.Drawing.Point(3, 250);
             this.blLabel.Name = "blLabel";
-            this.blLabel.Size = new System.Drawing.Size(378, 68);
+            this.blLabel.Size = new System.Drawing.Size(378, 40);
             this.blLabel.TabIndex = 1;
-            this.blLabel.Text = "MINI\r\nNOTE";
+            this.blLabel.Text = "MINI NOTE";
             this.blLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mainMenu
@@ -137,8 +137,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
-            this.Controls.Add(this.mainMenu);
             this.Controls.Add(this.introPanel);
+            this.Controls.Add(this.mainMenu);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
