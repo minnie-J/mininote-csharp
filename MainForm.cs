@@ -22,5 +22,11 @@ namespace MiniNote
             introPanel.Visible = false;
             mainMenu.Visible = true;
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            ToDoEditForm toDoEditor = new ToDoEditForm();
+            toDoEditor.ShowDialog();
+        }
     }
 }

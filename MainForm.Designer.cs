@@ -34,11 +34,14 @@
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.blLabel = new System.Windows.Forms.Label();
             this.mainMenu = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.toDoTab = new System.Windows.Forms.TabPage();
+            this.noteTab = new System.Windows.Forms.TabPage();
+            this.totalCount = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
             this.introPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.mainMenu.SuspendLayout();
+            this.toDoTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // introPanel
@@ -101,9 +104,10 @@
             // 
             // mainMenu
             // 
-            this.mainMenu.Controls.Add(this.tabPage1);
-            this.mainMenu.Controls.Add(this.tabPage2);
+            this.mainMenu.Controls.Add(this.toDoTab);
+            this.mainMenu.Controls.Add(this.noteTab);
             this.mainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainMenu.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
             this.mainMenu.SelectedIndex = 0;
@@ -112,33 +116,56 @@
             this.mainMenu.TabIndex = 1;
             this.mainMenu.Visible = false;
             // 
-            // tabPage1
+            // toDoTab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(376, 431);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.toDoTab.Controls.Add(this.addButton);
+            this.toDoTab.Controls.Add(this.totalCount);
+            this.toDoTab.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.toDoTab.Location = new System.Drawing.Point(4, 26);
+            this.toDoTab.Name = "toDoTab";
+            this.toDoTab.Padding = new System.Windows.Forms.Padding(3);
+            this.toDoTab.Size = new System.Drawing.Size(376, 431);
+            this.toDoTab.TabIndex = 0;
+            this.toDoTab.Text = "TO DO";
+            this.toDoTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // noteTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(376, 431);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.noteTab.Location = new System.Drawing.Point(4, 26);
+            this.noteTab.Name = "noteTab";
+            this.noteTab.Padding = new System.Windows.Forms.Padding(3);
+            this.noteTab.Size = new System.Drawing.Size(376, 431);
+            this.noteTab.TabIndex = 1;
+            this.noteTab.Text = "NOTE";
+            this.noteTab.UseVisualStyleBackColor = true;
+            // 
+            // totalCount
+            // 
+            this.totalCount.AutoSize = true;
+            this.totalCount.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.totalCount.Location = new System.Drawing.Point(8, 10);
+            this.totalCount.Name = "totalCount";
+            this.totalCount.Size = new System.Drawing.Size(53, 17);
+            this.totalCount.TabIndex = 0;
+            this.totalCount.Text = "Total 0";
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(293, 7);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 1;
+            this.addButton.Text = "New";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
-            this.Controls.Add(this.introPanel);
             this.Controls.Add(this.mainMenu);
+            this.Controls.Add(this.introPanel);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -151,6 +178,8 @@
             this.introPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.mainMenu.ResumeLayout(false);
+            this.toDoTab.ResumeLayout(false);
+            this.toDoTab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -162,8 +191,10 @@
         private System.Windows.Forms.Label blLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.TabControl mainMenu;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage toDoTab;
+        private System.Windows.Forms.TabPage noteTab;
+        private System.Windows.Forms.Label totalCount;
+        private System.Windows.Forms.Button addButton;
     }
 }
 
