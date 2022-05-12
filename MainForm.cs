@@ -12,8 +12,11 @@ namespace MiniNote
 {
     public partial class MainForm : Form
     {
+        private List<ToDo> toDoList;
+
         public MainForm()
         {
+            toDoList = ToDoImple.getToDoList();
             InitializeComponent();
         }
 
