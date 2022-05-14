@@ -15,13 +15,21 @@ namespace MiniNote
         ToDoList todos = ToDoList.Instance();
         Dictionary<int, ToDo> todoList;
 
+        bool isAOT = false;
+
         public MainForm()
         {
             InitializeComponent();
             todos.Initialize();
             todoList = todos.GetToDoList();
             setTotalCount();
+            aotButton.Visible = false;
         }
+
+        //private void setAOT()
+        //{
+
+        //}
 
         private void setTotalCount()
         {
@@ -30,6 +38,7 @@ namespace MiniNote
 
         private void startButton_Click(object sender, EventArgs e)
         {
+            aotButton.Visible = true;
             introPanel.Visible = false;
             mainMenu.Visible = true;
         }
@@ -42,6 +51,21 @@ namespace MiniNote
             //frm.ShowDialog();
 
             setTotalCount();
+        }
+
+        private void aotButton_Click(object sender, EventArgs e)
+        {
+            isAOT = !isAOT;
+
+            if (isAOT)
+            {
+                aotButton.ForeColor = Color.SeaGreen;
+                TopMost = true;
+            } else
+            {
+                aotButton.ForeColor = SystemColors.ControlDark;
+                TopMost = false;
+            }
         }
     }
 }

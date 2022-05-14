@@ -36,11 +36,12 @@
             this.mainMenu = new System.Windows.Forms.TabControl();
             this.toDoTab = new System.Windows.Forms.TabPage();
             this.todoListPanel = new System.Windows.Forms.Panel();
-            this.toDoItem1 = new MiniNote.ToDoItem();
             this.addButton = new System.Windows.Forms.Button();
             this.totalCount = new System.Windows.Forms.Label();
             this.noteTab = new System.Windows.Forms.TabPage();
+            this.aotButton = new System.Windows.Forms.Label();
             this.toDoItem2 = new MiniNote.ToDoItem();
+            this.toDoItem1 = new MiniNote.ToDoItem();
             this.introPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.mainMenu.SuspendLayout();
@@ -144,22 +145,6 @@
             this.todoListPanel.Size = new System.Drawing.Size(376, 395);
             this.todoListPanel.TabIndex = 2;
             // 
-            // toDoItem1
-            // 
-            this.toDoItem1.Location = new System.Drawing.Point(8, 8);
-            this.toDoItem1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.toDoItem1.Name = "toDoItem1";
-            this.toDoItem1.Size = new System.Drawing.Size(360, 34);
-            this.toDoItem1.TabIndex = 0;
-            // 
-            // toDoItem2
-            // 
-            this.toDoItem2.Location = new System.Drawing.Point(8, 50);
-            this.toDoItem2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.toDoItem2.Name = "toDoItem2";
-            this.toDoItem2.Size = new System.Drawing.Size(360, 34);
-            this.toDoItem2.TabIndex = 1;
-            // 
             // addButton
             // 
             this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -191,11 +176,42 @@
             this.noteTab.Text = "NOTE";
             this.noteTab.UseVisualStyleBackColor = true;
             // 
+            // aotButton
+            // 
+            this.aotButton.AutoSize = true;
+            this.aotButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aotButton.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.aotButton.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.aotButton.Location = new System.Drawing.Point(276, 4);
+            this.aotButton.Name = "aotButton";
+            this.aotButton.Size = new System.Drawing.Size(103, 17);
+            this.aotButton.TabIndex = 2;
+            this.aotButton.Text = "Always On Top";
+            this.aotButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.aotButton.Click += new System.EventHandler(this.aotButton_Click);
+            // 
+            // toDoItem2
+            // 
+            this.toDoItem2.Location = new System.Drawing.Point(8, 50);
+            this.toDoItem2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.toDoItem2.Name = "toDoItem2";
+            this.toDoItem2.Size = new System.Drawing.Size(360, 34);
+            this.toDoItem2.TabIndex = 1;
+            // 
+            // toDoItem1
+            // 
+            this.toDoItem1.Location = new System.Drawing.Point(8, 8);
+            this.toDoItem1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.toDoItem1.Name = "toDoItem1";
+            this.toDoItem1.Size = new System.Drawing.Size(360, 34);
+            this.toDoItem1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.aotButton);
             this.Controls.Add(this.mainMenu);
             this.Controls.Add(this.introPanel);
             this.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -214,6 +230,7 @@
             this.toDoTab.PerformLayout();
             this.todoListPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -229,6 +246,7 @@
         private System.Windows.Forms.Label totalCount;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Panel todoListPanel;
+        private System.Windows.Forms.Label aotButton;
         private ToDoItem toDoItem1;
         private ToDoItem toDoItem2;
     }
