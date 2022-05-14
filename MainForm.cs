@@ -12,12 +12,12 @@ namespace MiniNote
 {
     public partial class MainForm : Form
     {
-        private List<ToDo> toDoList;
-
+        ToDoList todos = ToDoList.Instance();
+        
         public MainForm()
         {
-            toDoList = ToDoImple.getToDoList();
             InitializeComponent();
+            todos.Initialize();
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -30,6 +30,8 @@ namespace MiniNote
         {
             ToDoEditForm toDoEditor = new ToDoEditForm();
             toDoEditor.ShowDialog();
+            //ToDoEditForm frm = new ToDoEditForm("test!!!!");
+            //frm.ShowDialog();
         }
     }
 }
