@@ -35,13 +35,17 @@
             this.blLabel = new System.Windows.Forms.Label();
             this.mainMenu = new System.Windows.Forms.TabControl();
             this.toDoTab = new System.Windows.Forms.TabPage();
-            this.noteTab = new System.Windows.Forms.TabPage();
-            this.totalCount = new System.Windows.Forms.Label();
+            this.todoListPanel = new System.Windows.Forms.Panel();
+            this.toDoItem1 = new MiniNote.ToDoItem();
             this.addButton = new System.Windows.Forms.Button();
+            this.totalCount = new System.Windows.Forms.Label();
+            this.noteTab = new System.Windows.Forms.TabPage();
+            this.toDoItem2 = new MiniNote.ToDoItem();
             this.introPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.mainMenu.SuspendLayout();
             this.toDoTab.SuspendLayout();
+            this.todoListPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // introPanel
@@ -118,6 +122,7 @@
             // 
             // toDoTab
             // 
+            this.toDoTab.Controls.Add(this.todoListPanel);
             this.toDoTab.Controls.Add(this.addButton);
             this.toDoTab.Controls.Add(this.totalCount);
             this.toDoTab.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -129,15 +134,42 @@
             this.toDoTab.Text = "TO DO";
             this.toDoTab.UseVisualStyleBackColor = true;
             // 
-            // noteTab
+            // todoListPanel
             // 
-            this.noteTab.Location = new System.Drawing.Point(4, 26);
-            this.noteTab.Name = "noteTab";
-            this.noteTab.Padding = new System.Windows.Forms.Padding(3);
-            this.noteTab.Size = new System.Drawing.Size(376, 431);
-            this.noteTab.TabIndex = 1;
-            this.noteTab.Text = "NOTE";
-            this.noteTab.UseVisualStyleBackColor = true;
+            this.todoListPanel.AutoScroll = true;
+            this.todoListPanel.Controls.Add(this.toDoItem2);
+            this.todoListPanel.Controls.Add(this.toDoItem1);
+            this.todoListPanel.Location = new System.Drawing.Point(0, 36);
+            this.todoListPanel.Name = "todoListPanel";
+            this.todoListPanel.Size = new System.Drawing.Size(376, 395);
+            this.todoListPanel.TabIndex = 2;
+            // 
+            // toDoItem1
+            // 
+            this.toDoItem1.Location = new System.Drawing.Point(8, 8);
+            this.toDoItem1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.toDoItem1.Name = "toDoItem1";
+            this.toDoItem1.Size = new System.Drawing.Size(360, 34);
+            this.toDoItem1.TabIndex = 0;
+            // 
+            // toDoItem2
+            // 
+            this.toDoItem2.Location = new System.Drawing.Point(8, 50);
+            this.toDoItem2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.toDoItem2.Name = "toDoItem2";
+            this.toDoItem2.Size = new System.Drawing.Size(360, 34);
+            this.toDoItem2.TabIndex = 1;
+            // 
+            // addButton
+            // 
+            this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addButton.Location = new System.Drawing.Point(293, 7);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 1;
+            this.addButton.Text = "New";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // totalCount
             // 
@@ -149,15 +181,15 @@
             this.totalCount.TabIndex = 0;
             this.totalCount.Text = "Total 0";
             // 
-            // addButton
+            // noteTab
             // 
-            this.addButton.Location = new System.Drawing.Point(293, 7);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
-            this.addButton.TabIndex = 1;
-            this.addButton.Text = "New";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.noteTab.Location = new System.Drawing.Point(4, 26);
+            this.noteTab.Name = "noteTab";
+            this.noteTab.Padding = new System.Windows.Forms.Padding(3);
+            this.noteTab.Size = new System.Drawing.Size(376, 431);
+            this.noteTab.TabIndex = 1;
+            this.noteTab.Text = "NOTE";
+            this.noteTab.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -180,6 +212,7 @@
             this.mainMenu.ResumeLayout(false);
             this.toDoTab.ResumeLayout(false);
             this.toDoTab.PerformLayout();
+            this.todoListPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -195,6 +228,9 @@
         private System.Windows.Forms.TabPage noteTab;
         private System.Windows.Forms.Label totalCount;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Panel todoListPanel;
+        private ToDoItem toDoItem1;
+        private ToDoItem toDoItem2;
     }
 }
 

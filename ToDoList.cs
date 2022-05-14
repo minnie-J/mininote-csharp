@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace MiniNote
 {
+    [Serializable]
     internal class ToDoList : IToDoList
     {
         // Singleton
@@ -69,7 +70,8 @@ namespace MiniNote
             if (result)
             {
                 _id++;
-            } else
+            }
+            else
             {
                 RemoveToDo(_id);
             }
@@ -91,9 +93,9 @@ namespace MiniNote
 
         // 파일 read/write --------------
 
-        static string dir = AppDomain.CurrentDomain.BaseDirectory + "/data";
+        static string dir = AppDomain.CurrentDomain.BaseDirectory + "data";
         static string fileName = "todos.dat";
-        static string filePath = dir + "/" + fileName;
+        static string filePath = dir + "\\" + fileName;
 
         private void LoadData()
         {
@@ -102,7 +104,8 @@ namespace MiniNote
             try
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                SetToDoList(formatter.Deserialize(fs) as Dictionary<int, ToDo>);
+                Dictionary<int, ToDo> list = formatter.Deserialize(fs) as Dictionary<int, ToDo>;
+                SetToDoList(list);
             }
             catch (FileNotFoundException)
             {

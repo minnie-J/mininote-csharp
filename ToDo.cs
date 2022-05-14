@@ -20,8 +20,6 @@ namespace MiniNote
         private string text;
         private int status;
 
-        //public ToDo() { }
-
         public ToDo(int id, string regDate, string text, int status)
         {
             this.id = id;

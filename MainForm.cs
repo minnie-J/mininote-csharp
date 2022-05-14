@@ -13,11 +13,19 @@ namespace MiniNote
     public partial class MainForm : Form
     {
         ToDoList todos = ToDoList.Instance();
-        
+        Dictionary<int, ToDo> todoList;
+
         public MainForm()
         {
             InitializeComponent();
             todos.Initialize();
+            todoList = todos.GetToDoList();
+            setTotalCount();
+        }
+
+        private void setTotalCount()
+        {
+            totalCount.Text = "Total" + todoList.Count;
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -32,6 +40,8 @@ namespace MiniNote
             toDoEditor.ShowDialog();
             //ToDoEditForm frm = new ToDoEditForm("test!!!!");
             //frm.ShowDialog();
+
+            setTotalCount();
         }
     }
 }
