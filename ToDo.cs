@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniNote
 {
-    enum Status
+    public enum Status
     {
         ToDo,
         Doing,
@@ -28,9 +28,25 @@ namespace MiniNote
             this.status = status;
         }
 
-        public int Id { get; set; }
-        public string RegDate { get; set; }
-        public string Text { get; set; }
-        public int Status { get; set; }
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public string RegDate
+        {
+            get { return regDate; }
+            set { regDate = value; }
+        }
+        public string Text
+        {
+            get { return text; }
+            set { text = value; }
+        }
+        public int Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
     }
 }

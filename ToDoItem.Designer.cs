@@ -63,6 +63,7 @@
             this.statucButton.TabIndex = 0;
             this.statucButton.Text = "Doing";
             this.statucButton.UseVisualStyleBackColor = true;
+            this.statucButton.Click += new System.EventHandler(this.statucButton_Click);
             // 
             // todoText
             // 

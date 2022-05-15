@@ -36,12 +36,12 @@
             this.mainMenu = new System.Windows.Forms.TabControl();
             this.toDoTab = new System.Windows.Forms.TabPage();
             this.todoListPanel = new System.Windows.Forms.Panel();
+            //this.toDoItem2 = new MiniNote.ToDoItem();
+            //this.toDoItem1 = new MiniNote.ToDoItem();
             this.addButton = new System.Windows.Forms.Button();
             this.totalCount = new System.Windows.Forms.Label();
             this.noteTab = new System.Windows.Forms.TabPage();
             this.aotButton = new System.Windows.Forms.Label();
-            this.toDoItem2 = new MiniNote.ToDoItem();
-            this.toDoItem1 = new MiniNote.ToDoItem();
             this.introPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.mainMenu.SuspendLayout();
@@ -138,12 +138,28 @@
             // todoListPanel
             // 
             this.todoListPanel.AutoScroll = true;
-            this.todoListPanel.Controls.Add(this.toDoItem2);
-            this.todoListPanel.Controls.Add(this.toDoItem1);
+            //this.todoListPanel.Controls.Add(this.toDoItem2);
+            //this.todoListPanel.Controls.Add(this.toDoItem1);
             this.todoListPanel.Location = new System.Drawing.Point(0, 36);
             this.todoListPanel.Name = "todoListPanel";
             this.todoListPanel.Size = new System.Drawing.Size(376, 395);
             this.todoListPanel.TabIndex = 2;
+            //// 
+            //// toDoItem2
+            //// 
+            //this.toDoItem2.Location = new System.Drawing.Point(8, 50);
+            //this.toDoItem2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            //this.toDoItem2.Name = "toDoItem2";
+            //this.toDoItem2.Size = new System.Drawing.Size(360, 34);
+            //this.toDoItem2.TabIndex = 1;
+            //// 
+            //// toDoItem1
+            //// 
+            //this.toDoItem1.Location = new System.Drawing.Point(8, 8);
+            //this.toDoItem1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            //this.toDoItem1.Name = "toDoItem1";
+            //this.toDoItem1.Size = new System.Drawing.Size(360, 34);
+            //this.toDoItem1.TabIndex = 0;
             // 
             // addButton
             // 
@@ -190,22 +206,6 @@
             this.aotButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.aotButton.Click += new System.EventHandler(this.aotButton_Click);
             // 
-            // toDoItem2
-            // 
-            this.toDoItem2.Location = new System.Drawing.Point(8, 50);
-            this.toDoItem2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.toDoItem2.Name = "toDoItem2";
-            this.toDoItem2.Size = new System.Drawing.Size(360, 34);
-            this.toDoItem2.TabIndex = 1;
-            // 
-            // toDoItem1
-            // 
-            this.toDoItem1.Location = new System.Drawing.Point(8, 8);
-            this.toDoItem1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.toDoItem1.Name = "toDoItem1";
-            this.toDoItem1.Size = new System.Drawing.Size(360, 34);
-            this.toDoItem1.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -247,8 +247,8 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Panel todoListPanel;
         private System.Windows.Forms.Label aotButton;
-        private ToDoItem toDoItem1;
-        private ToDoItem toDoItem2;
+        //private ToDoItem toDoItem1;
+        //private ToDoItem toDoItem2;
     }
 }
 
