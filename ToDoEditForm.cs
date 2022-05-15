@@ -52,8 +52,23 @@ namespace MiniNote
             Close();
         }
 
+        void validator()
+        {
+            if (String.IsNullOrEmpty(textBox.Text))
+            {
+                changeLabel("내용을 입력해주세요!", Color.Red);
+                isEmptyString = true;
+            }
+            else
+            {
+                changeLabel(defaulLabel, defaultColor);
+                isEmptyString = false;
+            }
+        }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
+            validator();
             if (isEmptyString) return;
 
             if (isNew)
@@ -69,19 +84,10 @@ namespace MiniNote
             Close();
         }
 
+
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBox.Text))
-            {
-                changeLabel("내용을 입력해주세요!", Color.Red);
-                isEmptyString = true;
-                return;
-            }
-            else
-            {
-                changeLabel(defaulLabel, defaultColor);
-                isEmptyString = false;
-            }
+            validator();
         }
     }
 }
