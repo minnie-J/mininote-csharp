@@ -9,7 +9,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace MiniNote
 {
-    [Serializable]
     internal class ToDoList : IToDoList
     {
         // Singleton
@@ -35,7 +34,7 @@ namespace MiniNote
             {
                 LoadData();
 
-                // LINQ로 max값 찾기
+                // LINQ로 max값 찾아서 새 ToDo에 들어갈 아이디 정의
                 _id = todos.Max(todo => todo.Key) + 1;
             }
 
